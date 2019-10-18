@@ -1,0 +1,24 @@
+{
+  "name": "react-native",
+  "version": "1.0.0",
+  "description": "React Native for Web starter template",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "@babel/plugin-proposal-export-default-from": "7.5.2",
+    "@react-navigation/web": "1.0.0-alpha.9",
+    "react": "16.8.4",
+    "react-dom": "16.8.4",
+    "react-native-web": "0.11.x",
+    "react-navigation": "4.0.10",
+    "react-navigation-stack": "1.9.4",
+    "react-scripts": "2.1.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
