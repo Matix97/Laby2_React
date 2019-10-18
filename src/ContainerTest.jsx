@@ -3,6 +3,7 @@ import { View, Text, Button, TextInput, StyleSheet } from "react-native";
 import { createSwitchNavigator } from "@react-navigation/core";
 import { createBrowserApp } from "@react-navigation/web";
 import { BadLogin } from "./BadLogin";
+import { Api } from "./api";
 
 class HomeScreen extends React.Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class HomeScreen extends React.Component {
       //new page
       alert("Correct password and usernmae");
       this.props.navigation.navigate("Detail");
+      Api.call("");
     } else {
       //error page
       alert("Incorrect password or username or both");
