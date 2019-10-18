@@ -3,7 +3,7 @@ import { View, Text, Button, TextInput, StyleSheet } from "react-native";
 import { createSwitchNavigator } from "@react-navigation/core";
 import { createBrowserApp } from "@react-navigation/web";
 import { BadLogin } from "./BadLogin";
-import { Api } from "./api";
+import { Api, Users, UserDetail } from "./api";
 import { GoodLogin } from "./GoodLogin";
 
 class HomeScreen extends React.Component {
@@ -19,7 +19,7 @@ class HomeScreen extends React.Component {
     if (name === "admin" && pass === "admin") {
       //new page
       alert("Correct password and usernmae");
-      this.props.navigation.navigate("Good");
+      this.props.navigation.navigate("Dertail");
       Api.call("");
     } else {
       //error page
@@ -62,7 +62,9 @@ class Detailcreen extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <Text>Detail Screen</Text>
+        {Users.map(function(item) {
+          return <UserDetail name={item.name} />;
+        })}
       </View>
     );
   }
