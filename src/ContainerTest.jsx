@@ -4,6 +4,7 @@ import { createSwitchNavigator } from "@react-navigation/core";
 import { createBrowserApp } from "@react-navigation/web";
 import { BadLogin } from "./BadLogin";
 import { Api } from "./api";
+import { GoodLogin } from "./GoodLogin";
 
 class HomeScreen extends React.Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class HomeScreen extends React.Component {
     if (name === "admin" && pass === "admin") {
       //new page
       alert("Correct password and usernmae");
-      this.props.navigation.navigate("Detail");
+      this.props.navigation.navigate("Good");
       Api.call("");
     } else {
       //error page
@@ -76,6 +77,9 @@ const AppNavigator = createSwitchNavigator({
   },
   Bad: {
     screen: BadLogin
+  },
+  Good: {
+    screen: GoodLogin
   }
 });
 
