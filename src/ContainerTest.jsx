@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, Button, TextInput, StyleSheet } from "react-native";
 import { createSwitchNavigator } from "@react-navigation/core";
 import { createBrowserApp } from "@react-navigation/web";
+import { BadLogin } from "./BadLogin";
 
 class HomeScreen extends React.Component {
   constructor(props) {
@@ -20,6 +21,7 @@ class HomeScreen extends React.Component {
     } else {
       //error page
       alert("Incorrect password or username or both");
+      this.props.navigation.navigate("Bad");
     }
   }
   render() {
@@ -69,6 +71,9 @@ const AppNavigator = createSwitchNavigator({
   },
   Detail: {
     screen: Detailcreen
+  },
+  Bad: {
+    screen: BadLogin
   }
 });
 
