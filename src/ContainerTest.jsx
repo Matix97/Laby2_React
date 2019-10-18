@@ -19,7 +19,7 @@ class HomeScreen extends React.Component {
     if (name === "admin" && pass === "admin") {
       //new page
       alert("Correct password and usernmae");
-      this.props.navigation.navigate("Dertail");
+      this.props.navigation.navigate("Detail");
       Api.call("");
     } else {
       //error page
